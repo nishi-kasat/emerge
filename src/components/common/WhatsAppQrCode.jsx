@@ -1,25 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import QRCode from 'qrcode';
+import React from 'react';
 import { WHATSAPP_CONFIG, buildWhatsAppUrl } from '../../lib/whatsapp';
 import { MessageCircle } from 'lucide-react';
 
-export default function WhatsAppQrCode({ size = 180, caption = "SCAN TO WHATSAPP", showNumber = true }) {
-  const [qrDataUrl, setQrDataUrl] = useState('');
+export default function WhatsAppQrCode({ size = 200, caption = "SCAN TO WHATSAPP", showNumber = true }) {
   const targetUrl = buildWhatsAppUrl();
-
-  useEffect(() => {
-    QRCode.toDataURL(targetUrl, {
-      width: size * 2,
-      margin: 1,
-      color: {
-        dark: '#0D5427',
-        light: '#FFFFFF'
-      },
-      errorCorrectionLevel: 'H'
-    })
-      .then(url => setQrDataUrl(url))
-      .catch(err => console.error('Error generating WhatsApp QR code', err));
-  }, [targetUrl, size]);
 
   return (
     <div className="whatsapp-qr-wrapper">
@@ -28,24 +12,21 @@ export default function WhatsAppQrCode({ size = 180, caption = "SCAN TO WHATSAPP
         <span className="whatsapp-qr-title">WhatsApp Us</span>
       </div>
 
-      <div className="whatsapp-qr-box" style={{ width: size, height: size }}>
-        {qrDataUrl ? (
-          <div className="qr-image-container">
-            <img 
-              src={qrDataUrl} 
-              alt={`WhatsApp QR Code for ${WHATSAPP_CONFIG.displayWhatsAppNumber}`} 
-              width={size} 
-              height={size} 
-              className="qr-image"
-            />
-            <div className="qr-center-icon">
-              <span className="wa-icon-badge">💬</span>
-            </div>
-          </div>
-        ) : (
-          <div className="qr-loading">Generating...</div>
-        )}
-      </div>
+      <a 
+        href={targetUrl}
+        target="_blank" 
+        rel="noopener noreferrer"
+        title="Click to chat directly on WhatsApp"
+        style={{ display: 'block' }}
+      >
+        <div className="whatsapp-qr-box" style={{ width: size, height: 'auto' }}>
+          <img 
+            src="/images/whatsapp-qr.jpeg" 
+            alt={`Official WhatsApp QR Code - ${WHATSAPP_CONFIG.brandName}`} 
+            style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'contain', borderRadius: '4px' }}
+          />
+        </div>
+      </a>
 
       {showNumber && (
         <a 
@@ -54,6 +35,7 @@ export default function WhatsAppQrCode({ size = 180, caption = "SCAN TO WHATSAPP
           rel="noopener noreferrer" 
           className="whatsapp-number-badge"
           title="Click to chat directly on WhatsApp"
+          style={{ marginTop: '8px' }}
         >
           {WHATSAPP_CONFIG.displayWhatsAppNumber}
         </a>
