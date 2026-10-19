@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { ExternalLink, MessageCircle, MapPin, Building, Filter, CheckCircle2 } from 'lucide-react';
+import { MessageCircle, MapPin, Building, Filter, CheckCircle2 } from 'lucide-react';
 import { universitiesData, universityCategories } from '../data/universities';
 import { buildInstituteInquiryUrl } from '../lib/whatsapp';
 
@@ -33,12 +33,12 @@ export default function Universities() {
         </div>
       </section>
 
-      {/* Verified Brochure Highlights Banner */}
+      {/* Verified Highlights Banner */}
       <section className="section-tight" style={{ backgroundColor: '#FAF4F3', borderBottom: '2px solid var(--color-border-green)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', maxWidth: '850px', margin: '0 auto' }}>
             <span style={{ display: 'inline-block', backgroundColor: 'var(--color-dark-brown)', color: '#FFFFFF', padding: '4px 14px', borderRadius: '4px', fontSize: '0.8rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: '10px' }}>
-              Brochure Highlights • Top Institutes in India
+              Top Institutes in India
             </span>
             <h2 style={{ fontSize: '1.8rem', color: 'var(--color-dark-brown)', marginBottom: '8px' }}>
               Guidance for Premier National & Private Institutions
@@ -80,7 +80,7 @@ export default function Universities() {
                 key={item.id}
                 style={{
                   backgroundColor: '#FFFFFF',
-                  border: item.brochureHighlighted ? '2px solid var(--color-primary-green)' : '1.5px solid var(--color-border-green)',
+                  border: '1.5px solid var(--color-border-green)',
                   borderRadius: '10px',
                   padding: '24px',
                   display: 'flex',
@@ -89,12 +89,6 @@ export default function Universities() {
                   position: 'relative'
                 }}
               >
-                {item.brochureHighlighted && (
-                  <div style={{ position: 'absolute', top: '-10px', right: '16px', backgroundColor: 'var(--color-primary-green)', color: '#FFFFFF', padding: '2px 10px', borderRadius: '4px', fontSize: '0.72rem', fontWeight: '700', textTransform: 'uppercase' }}>
-                    Featured in Brochure
-                  </div>
-                )}
-
                 <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '16px' }}>
                   <div style={{ width: '70px', height: '70px', padding: '4px', border: '1px solid var(--color-border-light)', borderRadius: '8px', backgroundColor: '#FFFFFF', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                     <img src={item.logo} alt={`${item.name} logo`} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
@@ -133,28 +127,16 @@ export default function Universities() {
                   </div>
                 )}
 
-                <div style={{ display: 'flex', gap: '10px', paddingTop: '14px', borderTop: '1px solid var(--color-border-light)', marginTop: 'auto' }}>
-                  {item.website && (
-                    <a
-                      href={item.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn btn-outline-green btn-sm"
-                      style={{ flex: 1 }}
-                    >
-                      <span>Website</span>
-                      <ExternalLink size={13} />
-                    </a>
-                  )}
+                <div style={{ paddingTop: '14px', borderTop: '1px solid var(--color-border-light)', marginTop: 'auto' }}>
                   <a
                     href={buildInstituteInquiryUrl(item.name)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-whatsapp btn-sm"
-                    style={{ flex: 1 }}
+                    style={{ width: '100%' }}
                   >
-                    <MessageCircle size={14} />
-                    <span>Enquire</span>
+                    <MessageCircle size={15} />
+                    <span>Enquire About Admission</span>
                   </a>
                 </div>
               </div>
