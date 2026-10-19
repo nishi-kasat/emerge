@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <circle cx="100" cy="100" r="95" fill="#FFFFFF" stroke="#006699" stroke-width="4"/>
+  <circle cx="100" cy="100" r="82" fill="none" stroke="#17652F" stroke-width="2"/>
+  <path d="M65,70 h20 v55 h-20 z M90,70 h20 v55 h-20 z M115,70 h20 v55 h-20 z" fill="#006699"/>
+  <circle cx="75" cy="58" r="6" fill="#17652F"/>
+  <circle cx="100" cy="58" r="6" fill="#17652F"/>
+  <circle cx="125" cy="58" r="6" fill="#17652F"/>
+  <text x="100" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="12" fill="#006699">IIIT VADODARA</text>
+  <text x="100" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#555">ESTD. 2013</text>
+</svg>

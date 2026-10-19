@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <circle cx="100" cy="100" r="95" fill="#FFFFFF" stroke="#005A9C" stroke-width="4"/>
+  <circle cx="100" cy="100" r="82" fill="none" stroke="#0D5427" stroke-width="2"/>
+  <path d="M60,130 L100,50 L140,130 Z" fill="none" stroke="#005A9C" stroke-width="6"/>
+  <path d="M80,130 L100,90 L120,130 Z" fill="#0D5427"/>
+  <circle cx="100" cy="72" r="8" fill="#D4AF37"/>
+  <text x="100" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="13" fill="#005A9C">IIT JODHPUR</text>
+  <text x="100" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#555">ESTD. 2008</text>
+</svg>

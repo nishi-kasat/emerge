@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+<rect width="600" height="300" fill="#00247D"/>
+<g id="union-jack">
+  <clipPath id="nz-clip"><path d="M0,0 v150 h300 v-150 z"/></clipPath>
+  <g clip-path="url(#nz-clip)">
+    <path d="M0,0 L300,150 M300,0 L0,150" stroke="#FFF" stroke-width="30"/>
+    <path d="M0,0 L300,150 M300,0 L0,150" stroke="#CC142B" stroke-width="20"/>
+    <path d="M150,0 v150 M0,75 h300" stroke="#FFF" stroke-width="50"/>
+    <path d="M150,0 v150 M0,75 h300" stroke="#CC142B" stroke-width="30"/>
+  </g>
+</g>
+<g id="stars" fill="#CC142B" stroke="#FFF" stroke-width="2">
+  <polygon points="450,45 454,58 468,58 457,66 461,79 450,71 439,79 443,66 432,58 446,58"/>
+  <polygon points="510,105 514,118 528,118 517,126 521,139 510,131 499,139 503,126 492,118 506,118"/>
+  <polygon points="450,210 454,223 468,223 457,231 461,244 450,236 439,244 443,231 432,223 446,223"/>
+  <polygon points="395,130 398,140 409,140 400,147 403,157 395,151 387,157 390,147 381,140 392,140"/>
+</g>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <circle cx="100" cy="100" r="95" fill="#FCFBF6" stroke="#17652F" stroke-width="4"/>
+  <path d="M100,50 L160,80 L100,110 L40,80 Z" fill="#17652F"/>
+  <path d="M145,95 v35 c-15,20 -75,20 -90,0 v-35" fill="none" stroke="#451B13" stroke-width="5"/>
+  <circle cx="160" cy="115" r="4" fill="#D4AF37"/>
+  <line x1="160" y1="80" x2="160" y2="115" stroke="#D4AF37" stroke-width="3"/>
+  <text x="100" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="13" fill="#17652F">&amp; MANY MORE</text>
+  <text x="100" y="174" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#451B13">IITs, NITs, IIITs &amp; Top Inst.</text>
+</svg>
